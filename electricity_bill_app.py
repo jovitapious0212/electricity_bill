@@ -8,7 +8,7 @@ st.title("Electric Bill Prediction")
 st.write("Enter the number of AC Units to predict the Electric Bill.")
 
 # Load the saved model
-with open("electric_bill_prediction_model.pkl", "rb") as file:
+with open("electricity_bill_prediction_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 # Input: greater than 0 and less than 150
