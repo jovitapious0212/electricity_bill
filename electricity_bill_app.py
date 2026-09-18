@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
 
 # Page title
-st.title("Electric Bill Prediction")
+st.title("Electricity Bill Prediction")
 
-st.write("Enter the number of AC Units to predict the Electric Bill.")
+st.write("Enter the number of AC Units to predict the Electricity Bill.")
 
 # Load the saved model
 model = joblib.load("electricity_bill_prediction_model.pkl")
@@ -24,7 +24,7 @@ ac_units = st.number_input(
 )
 
 # Prediction
-if st.button("Predict Electric Bill"):
+if st.button("Predict Electricity Bill"):
 
     # Convert input to 2D array
     input_data = np.array([[ac_units]])
@@ -36,4 +36,4 @@ if st.button("Predict Electric Bill"):
     prediction = model.predict(input_data_poly)
 
     # Display result
-    st.success(f"Predicted Electric Bill: ₹{prediction[0]:.2f}")
+    st.success(f"Predicted Electricity Bill: ₹{prediction[0]:.2f}")
